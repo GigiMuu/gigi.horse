@@ -1,0 +1,72 @@
+:root {
+  --default-font-size: 2rem;
+}
+
+body {
+  background: #282a36;
+  color: #f8f8f2;
+  font-size: var(--default-font-size);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+a:link,
+a:visited {
+  color: #8BE9FD;
+}
+
+a:hover {
+  color: #BD93F9;
+  transform: rotate(90deg);
+}
+
+a:active {
+  color: #44475A;
+}
+
+.title {
+  font-size: calc(var(--default-font-size) * 1.5);
+  margin-bottom: 1rem;
+}
+
+.normal {
+  padding-left: 1rem;
+  font-size: var(--default-font-size);
+}
+
+.spacer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.games {
+  font-size: calc(var(--default-font-size) * 1.1);
+}
+
+.games_list {
+  padding-left: 1rem;
+}
+
+.games_item {
+  padding: 0.5rem 0.5rem;
+  transition: all 0.2s;
+}
+
+.games_item::before {
+  content: "👆 ";
+  text-decoration: none;
+  transition: all 0.4s;
+  display: inline-block;
+}
+
+.games_item:has(a:hover) {
+  font-size: calc(var(--default-font-size) * 1.1);
+}
+
+.games_item:has(a:hover)::before {
+  transform: rotate(450deg);
+}
